@@ -9,6 +9,7 @@ public class TaskItem {
 	{
 		this.strID = strID;
 		this.strTaskTitle = "Task";
+		this.strTaskContent = "";
 		listTags = new ArrayList<String>();
 	}
 	
@@ -16,7 +17,24 @@ public class TaskItem {
 	{
 		this.strID = strID;
 		this.strTaskTitle = strTitle;
+		this.strTaskContent = "";
 		listTags = new ArrayList<String>();
+	}
+	
+	public TaskItem(String strID, String strTitle, String strContent)
+	{
+		this.strID = strID;
+		this.strTaskTitle = strTitle;
+		this.strTaskContent = strContent;
+		listTags = new ArrayList<String>();
+	}
+	
+	public TaskItem(String strID, String strTitle, String strContent, List<String> listTags)
+	{
+		this.strID = strID;
+		this.strTaskTitle = strTitle;
+		this.strTaskContent = strContent;
+		this.listTags = listTags;
 	}
 	
 	public String getID() {

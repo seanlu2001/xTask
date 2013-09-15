@@ -2,6 +2,7 @@ package com.task.core;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class TaskCore {
 
@@ -23,6 +24,12 @@ public class TaskCore {
 	public Map<String, TaskItem> GetTaskList()
 	{
 		return mapItem;
+	}
+	
+	public void AddTaskItem(String strTitle, String strContent)
+	{
+		TaskItem item = new TaskItem(UUID.randomUUID().toString(), strTitle, strContent);
+		mapItem.put(item.getID(), item);
 	}
 	
 	private Map<String, TaskItem> mapItem;
