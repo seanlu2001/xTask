@@ -36,4 +36,7 @@ public class Account {
 		return mAmount;
 	}
 	
+	public double addAmount(Transaction transaction){
+		return mAmount;
+	}
 }
